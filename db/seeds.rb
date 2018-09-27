@@ -10,8 +10,10 @@ playlists = Playlist.create(
   [
     {
       title: "Chill Playlist"
+      #songs: ["Song 1", "Song 2"]
     },
     {
       title: "Gym Playlist"
+      #songs: ["GYMMM", "wooooo"]
     }
   ])
