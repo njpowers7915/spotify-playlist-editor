@@ -16,7 +16,7 @@ class App extends Component {
     return (
       <div className="App">
         <div className="App-header">
-          <h1>Spotify Playlist Editor</h1>
+          <h1>Welcome to Spotify Playlist Editor</h1>
         </div>
         <PlaylistsContainer playlists={playlists} />
       </div>
