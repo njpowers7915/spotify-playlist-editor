@@ -2,6 +2,15 @@ import React, { Component } from 'react';
 import './App.css';
 import PlaylistsContainer from './components/PlaylistsContainer'
 
+const playlists = [
+  {
+    title: "Chill Playlist"
+  },
+  {
+    title: "Gym Playlist"
+  }
+]
+
 class App extends Component {
   render() {
     return (
@@ -9,7 +18,7 @@ class App extends Component {
         <div className="App-header">
           <h1>Spotify Playlist Editor</h1>
         </div>
-        <PlaylistsContainer />
+        <PlaylistsContainer playlists={playlists} />
       </div>
     );
   }

@@ -4,7 +4,7 @@ class PlaylistsContainer extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      playlists: []
+      playlists: this.props.playlists
     }
   }
 
@@ -16,11 +16,15 @@ class PlaylistsContainer extends Component {
     })
     .catch(error => console.log(error))
   }
-  
+
   render() {
     return (
       <div>
-        Playlists
+        {
+          this.state.playlists.map((playlist, key) => {
+            return <div className="playlist" key={key}>{playlist.title}</div>
+          })
+        }
       </div>
     )
   }
