@@ -7,13 +7,13 @@ const Playlist = ({
   return (
     <div key={title} className = "playlist">
       <h2>{title}</h2>
-      <div className="song-list">
+      <ol className="song-list">
         {songs.map(song => <Song
           name={song.name}
           artist={song.artist}
           genre={song.genre}
           />)}
-      </div>
+      </ol>
     </div>
   )
 }

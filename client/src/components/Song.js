@@ -1,12 +1,10 @@
 import React from 'react'
 
-const Song = ({
-  name,
-  artist,
-  genre,
-}) => {
+const Song = ({ name, artist, genre }) => {
   return (
-    <div key={name} className = "song">{name} - {artist} - {genre}</div>
+    <div key={name} className = "song">
+      <li>{name} - {artist} - {genre}</li>
+    </div>
   )
 }
 
