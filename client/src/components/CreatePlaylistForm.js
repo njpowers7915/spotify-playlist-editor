@@ -10,3 +10,5 @@ const CreatePlaylistForm = ({onSubmit}) =>
       </form>
     </div>
   )
+
+export default CreatePlaylistForm
