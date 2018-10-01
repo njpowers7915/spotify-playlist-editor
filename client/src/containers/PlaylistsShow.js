@@ -4,9 +4,9 @@ const PlaylistsShow = props => {
 
   return (
     <div>
-      <h3>Movies Show Component!</h3>
+      <h3>Playlists Show Component!</h3>
     </div>
   );
 }
 
-export default MoviesShow;
+export default PlaylistsShow;
