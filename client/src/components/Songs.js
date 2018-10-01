@@ -1,12 +1,12 @@
 import React from 'react'
 
 const Song = ({
-  title,
+  name,
   artist,
   genre,
 }) => {
   return (
-    <div key={title} className = "song">{title} - {artist} - {genre}</div>
+    <div key={name} className = "song">{name} - {artist} - {genre}</div>
   )
 }
 
