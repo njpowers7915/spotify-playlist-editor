@@ -13,9 +13,9 @@ class App extends Component {
       <div className="App">
         <Router>
           <React.Fragment>
-            <Route exact path="/" render={WelcomeContainer} />
-            <Route exact path="/playlists" render={HomeContainer} />
-            <Route exact path="/playlists/:playlistid" render={PlaylistsShow} />
+            <Route exact path="/" component={WelcomeContainer} />
+            <Route exact path="/playlists" component={HomeContainer} />
+            <Route exact path="/playlists/:playlistid" component={PlaylistsShow} />
           </React.Fragment>
         </Router>
       </div>
