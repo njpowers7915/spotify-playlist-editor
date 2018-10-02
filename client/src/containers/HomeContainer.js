@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 import { connect } from 'react-redux';
 import NavBar from './NavBar'
 import PlaylistsContainer from './PlaylistsContainer'
