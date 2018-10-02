@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import { connect } from 'react-redux';
 import NavBar from './NavBar'
 import PlaylistsContainer from './PlaylistsContainer'
-import CreatePlaylistForm from '../components/CreatePlaylistForm'
+import PlaylistsNew from './PlaylistsNew'
 
 class HomeContainer extends Component {
   constructor(props) {
@@ -16,7 +16,7 @@ class HomeContainer extends Component {
     return (
       <div>
         <NavBar />
-        <CreatePlaylistForm />
+        <PlaylistsNew />
         <PlaylistsContainer />
       </div>
     )
