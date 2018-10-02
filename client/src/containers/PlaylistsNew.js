@@ -14,9 +14,8 @@ class PlaylistsNew extends Component {
   handleOnSubmit = event => {
     event.preventDefault();
     const { createPlaylist, history } = this.props
-    createPlaylist(this.state)
-    let playlistId = this.state.id
-    history.push(`/plalylists/${playlistId}`)
+    let newPlaylist = createPlaylist(this.state)
+    history.push(`/plalylists/${newPlaylist.id}`)
   }
 
   handleOnChange = event => {
