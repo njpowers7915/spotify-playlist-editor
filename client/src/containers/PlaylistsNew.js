@@ -1,16 +1,40 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
-import { addPlaylist } from '../actions';
+import { createPlaylist } from '../actions';
 
-const CreatePlaylistForm = ({onSubmit}) =>
-  let input
-  return (
-    <div>
-      <form onSubmit={e => { onSubmit(input.value) }}>
-        <input ref={node => {input = node}} />
+class PlaylistsNew extends Component {
+  constructor () {
+    super()
+    this.state = {
+      title: ''
+      songs: []
+    }
+  }
+
+  handleOnSubmit = event => {
+    event.preventDefault();
+    const { createPlaylist, history } = this.props
+    createPlaylist(this.state)
+    let playlistId = this.state.id
+    history.push(`/plalylists/${playlistId}`)
+  }
+
+  handleOnChange = event => {
+    this.setState({
+      title: event.target.value
+    })
+  }
+
+  render() {
+    return (
+      <form style={{ marginTop: '16px' }} onSubmit={this.handleOnSubmit} >
+        <input type="text"
+          onChange={this.handleOnChange}
+          placeholder="Create Playlist" />
         <button type="submit">Create Playlist</button>
       </form>
-    </div>
-  )
+    )
+  }
+}
 
-export default CreatePlaylistForm
+export default connect(null, { createPlaylist })(PlaylistsNew)
