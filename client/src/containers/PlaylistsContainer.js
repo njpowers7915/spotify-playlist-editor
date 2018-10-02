@@ -1,10 +1,16 @@
 import React from 'react';
+import { Route } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PlaylistList from '../components/PlaylistList';
+import PlaylistShow from './PlaylistShow';
 
-const PlaylistsContainer = ({ playlists }) =>
+const PlaylistsContainer = ({ match, playlists }) =>
   <div>
     <PlaylistList playlists={playlists} />
+    <Route path={`${match.url}/:playlistId`} component={PlaylistShow} />
+    <Route exact path={match.url} render={() => (
+      <h3>Select a Playlist from the list</h3>
+    )}
   </div>;
 
 const mapStateToProps = (state) => {

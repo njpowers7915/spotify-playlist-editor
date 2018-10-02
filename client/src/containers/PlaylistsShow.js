@@ -8,20 +8,23 @@ import SearchSongForm from '../components/SearchSongForm'
 class PlaylistsShow = props => {
   return (
     <div>
-      Playlist Show Component
+      <NavBar />
+      <h3>{playlist.title}</h3>
+      <SearchSongForm />
+      <SongsContainer />
     </div>
   )
 }
 
-  render() {
-    return (
-      <div>
-        <NavBar />
-        <SearchSongForm />
-        <SongsContainer />
-      </div>
-    )
+const mapStateToProps = (state, ownProps) => {
+  const playlist = state.playlists.find(playlist => playlist.id ==
+    ownProps.match.params.playlistId)
+
+  if (playlist) {
+    return { playlist }
+  } else {
+    return { playlist: {} }
   }
 }
 
-export default PlaylistsShow
+export default connect(mapStateToProps)(PlaylistShow);
