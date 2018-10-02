@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React from 'react';
+import { connect } from 'react-redux';
 
 class PlaylistsContainer extends Component {
   constructor(props) {
