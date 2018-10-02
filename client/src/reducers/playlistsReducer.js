@@ -1,5 +1,5 @@
 const initialState = {
-  songs: []
+  playlists: []
 }
 
 const managePlaylists = (state = initialState, action) => {

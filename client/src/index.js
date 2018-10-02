@@ -1,12 +1,12 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {render} from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import './index.css';
 //import registerServiceWorker from './registerServiceWorker';
 
-import App from './App';
+import App from './containers/App';
 
 const initialState = {
   playlists: []
@@ -14,7 +14,7 @@ const initialState = {
 
 const store = createStore(rootReducer, initialState)
 
-ReactDOM.render(
+render(
   <Provider store={store} >
     <App />
   </Provider>,
