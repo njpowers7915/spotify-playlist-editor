@@ -1,5 +1,5 @@
 import React from 'react';
-import { connect } from 'react-redux';
+//import { connect } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 
 /* Add basic styling for NavLinks */
@@ -12,7 +12,7 @@ const link = {
   color: 'white',
 }
 
-const Navbar = () =>
+const NavBar = () =>
   <div>
     <h3>Welcome user!</h3>
     <NavLink to="/" exact style={link}

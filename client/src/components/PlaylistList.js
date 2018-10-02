@@ -20,5 +20,3 @@ export default (props) => {
     </div>
   )
 }
-
-export default PlaylistList;

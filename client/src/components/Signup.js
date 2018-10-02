@@ -1,9 +1,9 @@
-import React from 'react'
+import React, {Component} from 'react';
 
-export default class Signup extends React.Component {
-  return (
-    <div>
-      <p>Signup Form</p>
-    </div>
-  )
+export default class Signup extends Component {
+  render() {
+    return (
+        <p>Signup Form</p>
+    )
+  }
 }

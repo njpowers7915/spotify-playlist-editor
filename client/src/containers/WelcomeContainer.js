@@ -1,13 +1,15 @@
 import React, {Component} from 'react';
-import { connect } from 'react-redux';
+//import { connect } from 'react-redux';
+import Login from '../components/Login';
+import Signup from '../components/Signup';
 
 class WelcomeContainer extends Component {
-  constructor(props) {
+  //constructor(props) {
     //super(props)
     //this.state = {
     //  playlists: this.props.playlists
     //}
-  }
+  //}
 
   render() {
     return (
@@ -22,4 +24,4 @@ class WelcomeContainer extends Component {
   }
 }
 
-export default HomeContainer
+export default WelcomeContainer

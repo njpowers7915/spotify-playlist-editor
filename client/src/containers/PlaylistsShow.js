@@ -17,7 +17,7 @@ const PlaylistsShow = ({ playlist }) => {
 }
 
 const mapStateToProps = (state, ownProps) => {
-  const playlist = state.playlists.find(playlist => playlist.id ==
+  const playlist = state.playlists.find(playlist => playlist.id ===
     ownProps.match.params.playlistId)
 
   if (playlist) {
@@ -27,4 +27,4 @@ const mapStateToProps = (state, ownProps) => {
   }
 }
 
-export default connect(mapStateToProps)(PlaylistShow);
+export default connect(mapStateToProps)(PlaylistsShow);

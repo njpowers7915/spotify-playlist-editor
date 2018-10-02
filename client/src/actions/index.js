@@ -4,7 +4,7 @@ export function createPlaylist(playlist) {
   playlist.id = ++counter
   return {
     type: 'CREATE_PLAYLIST',
-    title,  //<--ES6. same as text:text, in ES5
+    title: '',  //<--ES6. same as text:text, in ES5
     songs: []
  }
 }

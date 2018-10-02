@@ -1,6 +1,6 @@
 const initialState = {
   playlists: []
-}
+} 
 
 const managePlaylists = (state = initialState, action) => {
   switch (action.type) {

@@ -1,12 +1,12 @@
-import React from 'react';
+import React, {Component} from 'react';
 import { Provider } from 'react-redux';
-import { createStore, applyMiddleware } from 'redux';
-import thunk from 'redux-thunk';
+//import { createStore, applyMiddleware } from 'redux';
+//import thunk from 'redux-thunk';
 import store from '../store/index'
 //import registerServiceWorker from './registerServiceWorker';
 import App from './App';
 
-export default class Root extends React.Component {
+class Root extends Component {
   render() {
     return (
       <Provider store={store} >
@@ -15,3 +15,5 @@ export default class Root extends React.Component {
     )
   }
 }
+
+export default Root;

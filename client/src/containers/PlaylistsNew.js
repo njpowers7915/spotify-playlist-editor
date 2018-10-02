@@ -6,7 +6,7 @@ class PlaylistsNew extends Component {
   constructor () {
     super()
     this.state = {
-      title: ''
+      title: '',
       songs: []
     }
   }

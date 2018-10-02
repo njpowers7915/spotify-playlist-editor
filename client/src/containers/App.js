@@ -5,7 +5,7 @@ import WelcomeContainer from './WelcomeContainer'
 import HomeContainer from './HomeContainer'
 import PlaylistsShow from './PlaylistsShow'
 
-const playlists = [{title: "Chill Playlist"}, {title: "Gym Playlist"}]
+//const playlists = [{title: "Chill Playlist"}, {title: "Gym Playlist"}]
 
 class App extends Component {
   render () {
