@@ -8,13 +8,13 @@ import PlaylistsNew from './PlaylistsNew';
 const PlaylistsContainer = ({ match, playlists }) =>
   <div>
     <PlaylistList playlists={playlists} />
-    <Switch>
-      <Route path={`${match.url}/new`} component={PlaylistsNew} />
-      <Route path={`${match.url}/:playlistId`} component={PlaylistsShow} />
-      <Route exact path={match.url} render={() => (
-        <h3>Select a Playlist from the list</h3>
-      )} />
-    </Switch>
+    //<Switch> 
+      //<Route path={`${match.url}/new`} component={PlaylistsNew} />
+      //<Route path={`${match.url}/:playlistId`} component={PlaylistsShow} />
+      //<Route exact path={match.url} render={() => (
+      //  <h3>Select a Playlist from the list</h3>
+      //)} />
+    //</Switch>
   </div>;
 
 const mapStateToProps = (state) => {
