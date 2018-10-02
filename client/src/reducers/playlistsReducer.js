@@ -5,8 +5,7 @@ const initialState = {
 const managePlaylists = (state = initialState, action) => {
   switch (action.type) {
     case 'CREATE_PLAYLIST':
-      return […state, {id: action.id, title: action.title, songs: action.songs
-              completed:false}]
+      return [...state, {id: action.id, title: action.title, songs: action.songs}]
 
     case 'DELETE_PLAYLIST':
       const removalIndex = state.playlists.findIndex(playlist =>

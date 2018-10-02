@@ -5,7 +5,7 @@ import SongsContainer from './SongsContainer'
 import SearchSongForm from '../components/SearchSongForm'
 
 
-class PlaylistsShow = props => {
+class PlaylistsShow = (props) => {
   return (
     <div>
       <NavBar />

@@ -1,16 +1,22 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const PlaylistList = ({ playlists }) => {
-  const renderPlaylists = playlists.map(playlist =>
-    <Link key={playlist.id} to={`/playlists/${playlist.id}`}>
-      {playlist.title}
-    </Link>
+export default (props) => {
+  const playlists = props.playlists.map(playlist =>
+    <li key={playlist.id}>
+      <Link to={`/playlists/${playlist.id}`}>
+        {playlist.title}
+      </Link>
+    </li>
   )
 
   return (
     <div>
-      {renderPlaylists}
+      <div className='playlists'>
+        <ul>
+          {playlists}
+        </ul>
+      </div>
     </div>
   )
 }
