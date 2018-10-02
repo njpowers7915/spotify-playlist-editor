@@ -1,22 +1,14 @@
 import React from 'react';
 import {render} from 'react-dom';
-import { Provider } from 'react-redux';
-import { createStore, applyMiddleware } from 'redux';
-import thunk from 'redux-thunk';
-import './index.css';
+//import { Provider } from 'react-redux';
+//import { createStore, applyMiddleware } from 'redux';
+//import thunk from 'redux-thunk';
+//import './index.css';
+//import store from './store/index'
 //import registerServiceWorker from './registerServiceWorker';
-
-import App from './containers/App';
-
-const initialState = {
-  playlists: []
-}
-
-const store = createStore(rootReducer, initialState)
+import Root from './containers/Root';
 
 render(
-  <Provider store={store} >
-    <App />
-  </Provider>,
+  <Root />,
   document.getElementById('root')
 );
