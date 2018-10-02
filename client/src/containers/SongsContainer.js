@@ -9,14 +9,14 @@ class SongsContainer extends Component {
     }
   }
 
-  componentDidMount() {
-    fetch('http://localhost:3001/api/v1/songs.json')
-    .then(response => {
-      console.log(response)
-      this.setState({playlists: song.data})
-    })
-    .catch(error => console.log(error))
-  }
+  //componentDidMount() {
+  //  fetch('http://localhost:3001/api/v1/songs.json')
+  //  .then(response => {
+  //    console.log(response)
+  //    this.setState({playlists: song.data})
+  //  })
+  //  .catch(error => console.log(error))
+  //}
 
   render() {
     return (

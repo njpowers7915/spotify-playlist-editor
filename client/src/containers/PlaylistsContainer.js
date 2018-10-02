@@ -9,14 +9,14 @@ class PlaylistsContainer extends Component {
     }
   }
 
-  componentDidMount() {
-    fetch('http://localhost:3001/api/v1/playlists.json')
-    .then(response => {
-      console.log(response)
-      this.setState({playlists: response.data})
-    })
-    .catch(error => console.log(error))
-  }
+  //componentDidMount() {
+  //  fetch('http://localhost:3001/api/v1/playlists.json')
+  //  .then(response => {
+  //    console.log(response)
+  //    this.setState({playlists: response.data})
+  //  })
+  //  .catch(error => console.log(error))
+  //}
 
   render() {
     return (
