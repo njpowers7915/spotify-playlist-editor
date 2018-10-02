@@ -1,7 +1,11 @@
-const managePlaylists = (state, action) => {
+const initialState = {
+  songs: []
+}
+
+const managePlaylists = (state = initialState, action) => {
   switch (action.type) {
     case 'CREATE_PLAYLIST':
-      return […state,{id: action.id, title: action.title, songs: action.songs
+      return […state, {id: action.id, title: action.title, songs: action.songs
               completed:false}]
 
     case 'DELETE_PLAYLIST':
@@ -19,3 +23,5 @@ const managePlaylists = (state, action) => {
       return state
     }
 }
+
+export default managePlaylists;
