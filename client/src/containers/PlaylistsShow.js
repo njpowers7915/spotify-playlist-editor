@@ -5,13 +5,13 @@ import SongsContainer from './SongsContainer'
 import SearchSongForm from '../components/SearchSongForm'
 
 
-class PlaylistsShow extends Component {
-  constructor(props) {
-    //super(props)
-    //this.state = {
-    //  playlists: this.props.playlists
-    //}
-  }
+class PlaylistsShow = props => {
+  return (
+    <div>
+      Playlist Show Component
+    </div>
+  )
+}
 
   render() {
     return (
