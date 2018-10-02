@@ -4,8 +4,19 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import './index.css';
-import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
-registerServiceWorker();
+import App from './App';
+
+const initialState = {
+  playlists: []
+}
+
+const store = createStore(rootReducer, initialState)
+
+ReactDOM.render(
+  <Provider store={store} >
+    <App />
+  </Provider>,
+  document.getElementById('root')
+);
