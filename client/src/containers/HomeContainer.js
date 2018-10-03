@@ -11,7 +11,7 @@ const HomeContainer = (props) =>
       <React.Fragment>
         <Route path="/playlists" component={NavBar} />
         <Route exact path="/playlists" component={PlaylistsNew} />
-        <Route exact path="/playlists" component={PlaylistsContainer} />
+        <Route path="/playlists" component={PlaylistsContainer} />
       </React.Fragment>
     </Router>
   </div>

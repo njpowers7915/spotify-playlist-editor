@@ -13,7 +13,7 @@ class PlaylistsContainer extends Component {
   }
 
   render() {
-    const {match, playlists} = this.props;
+    const { match, playlists } = this.props;
 
     return (
       <div>

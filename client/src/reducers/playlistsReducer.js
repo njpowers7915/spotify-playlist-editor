@@ -4,8 +4,10 @@ const initialState = {
 
 const playlistsReducer = (state = initialState, action) => {
   switch (action.type) {
+    case 'FETCH_PLAYLISTS':
+      return action.playlists;
     case 'CREATE_PLAYLIST':
-      return [...state, {id: action.id, title: action.title, songs: action.songs}]
+      return [...state, {id: action.id, title: action.title, songs: action.songs}];
 
     case 'DELETE_PLAYLIST':
       const removalIndex = state.playlists.findIndex(playlist =>
