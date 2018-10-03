@@ -9,6 +9,18 @@ export function createPlaylist(playlist) {
  }
 }
 
+export function fetchPlaylists() {
+  const playlists = [
+    {id: 1, title: 'EDM', songs: ['Song 1']},
+    {id: 1, title: 'Rap Playlist', songs: ['another song']},
+    {id: 1, title: 'Chill Playlist', songs: ['Awesome Song']},
+  ]
+  return {
+    type: 'FETCH_PLAYLISTS',
+    playlists
+  }
+}
+
 export const deletePlaylist = (id) => {
   return {
     type: 'DELETE_PLAYLIST',
