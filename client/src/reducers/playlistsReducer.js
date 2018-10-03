@@ -1,8 +1,8 @@
 const initialState = {
   playlists: []
-} 
+}
 
-const managePlaylists = (state = initialState, action) => {
+const playlistsReducer = (state = initialState, action) => {
   switch (action.type) {
     case 'CREATE_PLAYLIST':
       return [...state, {id: action.id, title: action.title, songs: action.songs}]
@@ -23,4 +23,4 @@ const managePlaylists = (state = initialState, action) => {
     }
 }
 
-export default managePlaylists;
+export default playlistsReducer;
