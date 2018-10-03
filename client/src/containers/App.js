@@ -12,7 +12,7 @@ const App = (props) =>
       <React.Fragment>
         <Route exact path="/" component={WelcomeContainer} />
         <Route exact path="/playlists" component={HomeContainer} />
-        <Route exact path="/playlists/:playlistid" component={PlaylistsShow} />
+        //<Route exact path="/playlists/:playlistid" component={PlaylistsShow} />
         </React.Fragment>
     </Router>
   </div>
