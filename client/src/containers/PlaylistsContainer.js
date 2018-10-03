@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { fetchPlaylists } from '../actions/index'
+import { fetchPlaylists } from '../actions'
 import PlaylistList from '../components/PlaylistList';
 import PlaylistsShow from './PlaylistsShow';
 import PlaylistsNew from './PlaylistsNew';
@@ -54,4 +54,4 @@ const mapStateToProps = (state) => {
   //  .catch(error => console.log(error))
   //}
 
-export default connect(mapStateToProps)(PlaylistsContainer);
+export default connect(mapStateToProps, { fetchPlaylists })(PlaylistsContainer);
