@@ -2,13 +2,15 @@ const initialState = {
   playlists: []
 }
 
-const playlistsReducer = (state = initialState, action) => {
+export default (state = initialState, action) => {
   switch (action.type) {
     case 'FETCH_PLAYLISTS':
       return action.playlists;
-    case 'CREATE_PLAYLIST':
-      return [...state, {id: action.id, title: action.title, songs: action.songs}];
 
+    case 'CREATE_PLAYLIST':
+      const playlist = Object.assign({}, action.playlist, {id: state.length + 1});
+      return [...state, playlist ];
+      
     case 'DELETE_PLAYLIST':
       const removalIndex = state.playlists.findIndex(playlist =>
        playlist.id === action.id)
@@ -24,5 +26,3 @@ const playlistsReducer = (state = initialState, action) => {
       return state
     }
 }
-
-export default playlistsReducer;

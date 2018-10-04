@@ -1,14 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-//import { Provider } from 'react-redux';
+import store from './store/index'
+import { Provider } from 'react-redux';
 //import { createStore, applyMiddleware } from 'redux';
 //import thunk from 'redux-thunk';
 //import './index.css';
 //import store from './store/index'
 //import registerServiceWorker from './registerServiceWorker';
-import Root from './containers/Root';
+import App from './containers/App';
 
-ReactDOM.render((
-  <Root />),
+ReactDOM.render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
   document.getElementById('root')
 );

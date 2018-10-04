@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 //import './App.css';
 import WelcomeContainer from './WelcomeContainer'
 import HomeContainer from './HomeContainer'
-import PlaylistsShow from './PlaylistsShow'
+//import PlaylistsShow from './PlaylistsShow'
 
 //const playlists = [{title: "Chill Playlist"}, {title: "Gym Playlist"}]
 const App = (props) =>
@@ -12,7 +12,7 @@ const App = (props) =>
       <React.Fragment>
         <Route exact path="/" component={WelcomeContainer} />
         <Route exact path="/playlists" component={HomeContainer} />
-        //<Route exact path="/playlists/:playlistid" component={PlaylistsShow} />
+        {/*<Route exact path="/playlists/:playlistid" component={PlaylistsShow}*/}
         </React.Fragment>
     </Router>
   </div>

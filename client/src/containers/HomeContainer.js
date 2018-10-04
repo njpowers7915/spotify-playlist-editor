@@ -1,12 +1,12 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { fetchPlaylists } from '../actions'
+import { Route, Switch } from 'react-router-dom';
+import { fetchPlaylists } from '../actions/index';
 //import { connect } from 'react-redux';
 import NavBar from './NavBar'
-import PlaylistsContainer from './PlaylistsContainer'
+import PlaylistsShow from './PlaylistsShow'
 import PlaylistsNew from './PlaylistsNew'
-import PlaylistList from './components/PlaylistList'
+import PlaylistList from '../components/PlaylistList'
 
 class HomeContainer extends Component {
 
@@ -19,6 +19,7 @@ class HomeContainer extends Component {
 
     return (
       <div>
+        <NavBar />
         <PlaylistList playlists={playlists} />
         <Switch>
           <Route path={`${match.url}/new`} component={PlaylistsNew} />
@@ -30,11 +31,12 @@ class HomeContainer extends Component {
       </div>
     )
   }
+}
   const mapStateToProps = state => {
     return {
       playlists: state.playlists
     };
   }
-}
+
 
 export default connect(mapStateToProps, { fetchPlaylists })(HomeContainer);
